@@ -1,11 +1,11 @@
-﻿function AppViewModel() {
+﻿var myViewModel = function (first, last) {
     var self = this;
 
-    self.firstName = ko.observable("Dustin");
-    self.lastName = ko.observable("Litorja");
+    self.firstName = ko.observable(first);
+    self.lastName = ko.observable(last);
     self.fullName = ko.computed(function () {
         return self.firstName() + " " + self.lastName();
-    }, this);
+    });
 }
 
-ko.applyBindings(new AppViewModel);
+ko.applyBindings(myViewModel("",""));

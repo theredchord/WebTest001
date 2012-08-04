@@ -5,3 +5,10 @@ C:\Users\D-Desktop\documents\visual studio 2010\Projects\WebTest001\WebTest001\b
 C:\Users\D-Desktop\documents\visual studio 2010\Projects\WebTest001\WebTest001\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\D-Desktop\documents\visual studio 2010\Projects\WebTest001\WebTest001\obj\Debug\WebTest001.dll
 C:\Users\D-Desktop\documents\visual studio 2010\Projects\WebTest001\WebTest001\obj\Debug\WebTest001.pdb
+C:\Users\D-Desktop\WebTest001\WebTest001\bin\WebTest001.dll
+C:\Users\D-Desktop\WebTest001\WebTest001\bin\WebTest001.pdb
+C:\Users\D-Desktop\WebTest001\WebTest001\bin\EntityFramework.dll
+C:\Users\D-Desktop\WebTest001\WebTest001\bin\EntityFramework.xml
+C:\Users\D-Desktop\WebTest001\WebTest001\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\D-Desktop\WebTest001\WebTest001\obj\Debug\WebTest001.dll
+C:\Users\D-Desktop\WebTest001\WebTest001\obj\Debug\WebTest001.pdb

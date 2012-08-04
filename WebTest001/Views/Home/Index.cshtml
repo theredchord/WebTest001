@@ -1,1 +1,2 @@
-﻿<p>Enter bid price: <input type="text" data-bind="value: formattedPrice" /></p>
+﻿<p>Enter a numeric value: <input type="text" data-bind="value: attemptedValue" /></p>
+<div data-bind="visible: !lastInputWasValid()">That's not a number!</div>

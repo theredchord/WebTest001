@@ -1,21 +1,17 @@
-﻿var myViewModel = function (first, last) {
+﻿var MasterViewModel = function () {
     var self = this;
+    self.price = ko.observable(25.99);
 
-    self.firstName = ko.observable(first);
-    self.lastName = ko.observable(last);
-    self.fullName = ko.computed({
+    self.formattedPrice = ko.computed({
         read: function () {
-            return self.firstName() + " " + this.lastName();
+            return "$" + self.price().toFixed(2);
         },
         write: function (value) {
-            var lastSpacePos = value.lastIndexOf(" ");
-            if (lastSpacePos > 0) {
-                self.firstName(value.substring(0, lastSpacePos));
-                self.lastName(value.substring(lastSpacePos + 1));
-            }
+            value = parseFloat(value.replace(/[^\.\d]/g, ""));
+            self.price(isNaN(value) ? 0 : value);
         },
         owner: self
     });
 }
 
-ko.applyBindings(myViewModel("",""));
+ko.applyBindings(new MasterViewModel());

@@ -1,10 +1,18 @@
 ﻿var MasterViewModel = function () {
-    var self, function1, function2;
+    var self;
 
     self = this;
-    self.theValue = ko.observable("");
+    self.theArray = ko.observableArray([
+        { value: "hello" },
+        { value: "hello2" },
+        { value: "hello3" },
+        { value: "hello4" }
+    ]);
     self.function1 = function () {
-        return alert("button1 " + self.theValue());
+        $.each(self.theArray(), function (index, value) {
+            alert(value.value);
+        }
+        );
     }
     self.function2 = function () {
         return alert("button2 " + self.theValue());

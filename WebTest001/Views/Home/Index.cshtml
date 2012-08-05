@@ -1,2 +1,19 @@
-﻿<input type="button" data-bind="click: function1" value="button1" />
-<input type="button" data-bind="click: function2" value="button2" />
+﻿<div class="form-inline">
+    <input type="text" data-bind="value: theValue" />
+    <input class="btn btn-primary" type="button" data-bind="click: arrayAdd" value="Add" />
+</div>
+<table class="table-condensed table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Prop1
+            </th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: theArray">
+        <tr>
+            <td data-bind="text: value">
+            </td>
+        </tr>
+    </tbody>
+</table>

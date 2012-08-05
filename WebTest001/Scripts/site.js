@@ -1,8 +1,8 @@
 ﻿var MasterViewModel = function () {
-    var self, testVal;
+    var self;
     self = this;
 
-    self.profitVal = ko.observable("0");
+    self.displayMessage = ko.observable(false);
 }
 
 ko.applyBindings(new MasterViewModel());

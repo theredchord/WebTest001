@@ -1,8 +1,5 @@
 ﻿<h1>
     Testing KnockoutJS</h1>
-<div data-bind="css: { profitWarning: profitVal() < 0, profitSevere: profitVal() < -50 }">
-    <p>
-        <span data-bind="text: profitVal"></span>
-    </p>
-    <input type="text" data-bind="value: profitVal" placeholder="Enter profit value" />
-</div>
+<label><input type="checkbox" data-bind="checked: displayMessage" /> Display message</label>
+
+<div data-bind="if: displayMessage">Here is a message.</div>

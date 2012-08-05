@@ -1,6 +1,6 @@
 ﻿<div class="form-inline">
     <input type="text" data-bind="value: theValue" />
-    <input class="btn btn-primary" type="button" data-bind="click: arrayAdd" value="Add" />
+    <input class="btn btn-primary" type="button" data-bind="click: arrayAdd, disable: theArray().length > 5" value="Add" />
 </div>
 <table class="table-condensed table-striped table-bordered">
     <thead>

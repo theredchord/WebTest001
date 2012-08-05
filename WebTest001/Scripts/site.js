@@ -1,7 +1,8 @@
 ﻿var MasterViewModel = function () {
-    var self;
+    var self, testVal;
 
     self = this;
+    testVal = 0;
     self.theArray = ko.observableArray([
         { value: "hello" },
         { value: "hello2" },
@@ -15,7 +16,11 @@
         );
     }
     self.function2 = function () {
-        return alert("button2 " + self.theValue());
+        self.theArray().push({
+            value: "test" + testVal
+        });
+        alert("Added: " + testVal);
+        testVal += 1;
     }
 }
 

@@ -5,9 +5,16 @@
     self.theValue = ko.observable("");
     self.theArray = ko.observableArray([]);
     self.arrayAdd = function () {
-        self.theArray.push({
-            value: self.theValue()
-        });
+        if ($("#theValInput").val().length > 0) {
+            self.theArray.push({
+                value: self.theValue()
+            });
+        } else {
+            alert("You must input a value");
+        }
+    }
+    self.arrayRemove = function () {
+        self.theArray.pop();
     }
 }
 

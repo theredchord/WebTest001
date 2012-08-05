@@ -1,8 +1,10 @@
-﻿<div class="form-inline">
-    <input type="text" data-bind="value: theValue" />
+﻿<h1>Testing KnockoutJS</h1>
+<div class="form-inline">
+    <input id="theValInput" type="text" data-bind="value: theValue" />
     <input class="btn btn-primary" type="button" data-bind="click: arrayAdd, disable: theArray().length > 5" value="Add" />
+    <input class="btn" type="button" data-bind="click: arrayRemove, disable: theArray().length < 1" value="Remove" />
 </div>
-<table class="table-condensed table-striped table-bordered">
+<table class="table-condensed table-striped table-bordered span2">
     <thead>
         <tr>
             <th>
@@ -17,3 +19,4 @@
         </tr>
     </tbody>
 </table>
+<span class="label label-important" data-bind="visible: theArray().length > 5">MAX REACHED</span>

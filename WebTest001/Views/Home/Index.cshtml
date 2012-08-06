@@ -1,5 +1,24 @@
 ﻿<h1>
     Testing KnockoutJS</h1>
-<label><input type="checkbox" data-bind="checked: displayMessage" /> Display message</label>
+<div class="form-inline">
+    <input type="text" data-bind="value: theValue" placeholder="Enter a value" />
+    <input type="button" class="btn btn-primary" data-bind="click: addItem, disable: theArray().length > 4" value="Add" />
+    <input type="button" class="btn" data-bind="click: removeItem, disable: theArray().length < 1" value="Remove" />
+</div>
+
+<table class="table-striped table-bordered table-condensed topSpace" data-bind="visible: theArray().length > 0">
+    <thead>
+        <tr><th>Value</th></tr>
+    </thead>
+    <tbody data-bind="foreach: theArray">
+        <tr>
+            <td data-bind="text: value"></td>
+        </tr>
+    </tbody>
+</table>
+
+<span class="label label-important topSpace" data-bind="visible: theArray().length > 4">MAX REACHED</span>
+
+<label class="topSpace"><input type="checkbox" data-bind="checked: displayMessage" /> Display message</label>
 
 <div data-bind="if: displayMessage">Here is a message.</div>

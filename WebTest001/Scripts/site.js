@@ -20,6 +20,13 @@
 
     //Checkbox-related items
     self.displayMessage = ko.observable(false);
+
+    //Name demonstration
+    self.firstName = ko.observable("");
+    self.lastName = ko.observable("");
+    self.fullName = ko.computed(function () {
+        return self.firstName() + " " + self.lastName();
+    });
 }
 
 ko.applyBindings(new MasterViewModel());

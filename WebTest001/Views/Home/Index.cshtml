@@ -22,3 +22,11 @@
 <label class="topSpace"><input type="checkbox" data-bind="checked: displayMessage" /> Display message</label>
 
 <div data-bind="if: displayMessage">Here is a message.</div>
+
+<div class="topSpace">
+    <p>First Name: <span data-bind="text: firstName"></span></p>
+    <p>Last Name: <span data-bind="text: lastName"></span></p>
+    <p>Full Name: <span data-bind="text: fullName"></span></p>
+    <input type="text" data-bind="value: firstName" placeholder="First Name" />
+    <input type="text" data-bind="value: lastName" placeholder="Last Name" />
+</div>
